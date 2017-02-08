@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="moduleName">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap an Angular Module</title>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/intro-angular.js"></script>
+    <link rel="stylesheet" href="../css/angular-test-styling.css">
+</head>
+<body>
+  <h1>This should show some text</h1>
+  <p>{{"Hello, Codeup!" | uppercase}}</p>
+  <hr>
+  <h1>This should repeat some numbers</h1>
+  <ul>
+    <li ng-repeat="num in [1,2,3,4,5,6,7,8,9]" ng-if="num % 3 != 0">
+      {{ num }} is a number not divisible by 3.
+    </li>
+  </ul>
+  <ol>
+    <li ng-repeat="letter in ['A', 'B', 'C']">{{ letter | lowercase }}</li>
+  </ol>
+</body>
+</html>
