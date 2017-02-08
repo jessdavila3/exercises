@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="moduleName">
+<head>
+  <meta charset="utf-8">
+  <title>Models in Angular</title>
+  <script type="text/javascript" src="../js/angular.min.js"></script>
+  <script type="text/javascript" src="../js/intro-angular.js"></script>
+</head>
+<body>
+  <h1>Form Inputs and Binding</h1>
+  <form novalidate>
+    <label for="first_name">First Name</label>
+    <input type="text" id="first_name" ng-model="user.firstName" maxlength="50" required>
+
+    <label for="last_name">Last Name</label>
+    <input type="text" id="last_name" ng-model="user.lastName" maxlength="100" required>
+
+    <label for="email">eMail</label>
+    <input type="email" id="email" ng-model="user.email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" ng-model="user.password" minlength="6" required>
+
+  </form>
+
+  <div>
+    Welcome {{ user.firstName }} {{ user.lastName }} <br>
+    We will send a confirmation email to {{ user.email }}
+  </div>
